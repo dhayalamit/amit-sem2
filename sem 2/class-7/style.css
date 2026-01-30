@@ -1,0 +1,23 @@
+header {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        background-color: slategray;
+        align-items: center;
+      }
+      .input-container {
+        /* align-content: center; */
+        display: flex;
+        gap: 1rem;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(4, 86, 66);
+        height: calc(100vh - 100px);
+      }
+
+      .weather-container {
+        display: flex;
+        gap: 1rem;
+      }
