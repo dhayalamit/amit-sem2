@@ -1,0 +1,134 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <title>Counter without setCount</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    let count = 0;
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    function Counter(props) {
+      return (
+        <div>
+          <h1>Counter App</h1>
+          <h2>{props.value}</h2>
+
+          <button onClick={props.decrement}>-</button>
+          <button onClick={props.reset}>Reset</button>
+          <button onClick={props.increment}>+</button>
+        </div>
+      );
+    }
+
+    function App() {
+
+      function increment() {
+        count++;
+        renderApp();  
+      }
+
+      function decrement() {
+        count--;
+        renderApp();
+      }
+
+      function reset() {
+        count = 0;
+        renderApp();
+      }
+
+      return (
+        <Counter
+          value={count}
+          increment={increment}
+          decrement={decrement}
+          reset={reset}
+        />
+      );
+    }
+
+    function renderApp() {
+      root.render(<App />);
+    }
+    renderApp();
+
+  </script>
+</body>
+</html> -->
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>React intro</h2>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      //transpiler
+      //select that node
+      const rootEle = document.querySelector("#root");
+      //create element
+
+      function CounterApp() {
+        //logic
+
+        let count = 0;
+
+        const handleInc = () => {
+          count++;
+          console.log(count);
+        };
+        const handleDec = () => {
+          count--;
+        };
+
+        return (
+          <div>
+            <h1>Counter App</h1>
+            <h2 id="count">{count}</h2>
+            <div class="btn-Group">
+              <button id="decrement" onClick={handleDec}>
+                -
+              </button>
+              <button id="reset">
+                reset
+              </button>
+              <button id="increment" onClick={handleInc}>
+                +
+              </button>
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<CounterApp />, rootEle);
+    </script>
+  </body>
+</html>

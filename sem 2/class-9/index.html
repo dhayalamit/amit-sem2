@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 7px;
+      }
+      #grandparent {
+        background-color: lightblue;
+        
+      }
+      #parent {
+        background-color: lightgreen;
+      }
+      #child {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grandparent"> 
+      <div id="parent"> 
+        <div id="child"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
